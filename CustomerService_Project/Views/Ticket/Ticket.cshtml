@@ -23,6 +23,7 @@
             <input type="submit" value="Submit Ticket">
         </div>
     </form>
+
     @if (Model != null && Model.Any())
     {
         <ul class="ticket-list">
@@ -33,7 +34,10 @@
                     <strong>Submission Time:</strong> @ticket.SubmissionDate.ToString("dd/MM/yyyy HH:mm") <br>
                     @if (ticket.Deadline < DateTime.Now.AddDays(7))
                     {
+                        var timeRemaining = ticket.Deadline.Date - DateTime.Today;
+
                         <span class="urgent">Deadline: @ticket.Deadline.ToString("dd/MM/yyyy HH:mm")</span> <br>
+                        <span class="urgent">You have: @timeRemaining.Days day(s) until the ticket has to be solved.</span>
                     }
                     else
                     {
