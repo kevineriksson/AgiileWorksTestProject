@@ -37,7 +37,7 @@ body {
     font-weight: bold;
 }
 
-.ticket-list li.urgent {
+.ticket-list span.urgent {
     color: red;
     font-weight: bold;
 }
