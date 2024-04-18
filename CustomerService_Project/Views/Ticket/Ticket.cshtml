@@ -1,0 +1,55 @@
+@model IEnumerable<Ticket>
+@{
+    ViewData["Title"] = "Submit New Ticket";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h1>@ViewData["Title"]</h1>
+
+    <form asp-action="AddTicket" asp-controller="Ticket" method="post">
+        <div class="ticket-description">
+            <label for="Description">Description:</label>
+            <input type="text" id="description" name="Description" required>
+        </div>
+        <div class="ticket-description">
+            <label for="deadline">Resolution Deadline:</label>
+            <input type="datetime-local" id="deadline" name="Deadline" required>
+        </div>
+        <div>
+            <input type="submit" value="Submit Ticket">
+        </div>
+    </form>
+    @if (Model != null && Model.Any())
+    {
+        <ul class="ticket-list">
+            @foreach (var ticket in Model)
+            {
+                <li>
+                    <strong>Description:</strong> @ticket.Description <br>
+                    <strong>Submission Time:</strong> @ticket.SubmissionDate.ToString("dd/MM/yyyy HH:mm") <br>
+                    @if (ticket.Deadline < DateTime.Now.AddDays(7))
+                    {
+                        <span class="urgent">Deadline: @ticket.Deadline.ToString("dd/MM/yyyy HH:mm")</span> <br>
+                    }
+                    else
+                    {
+                        <span>Deadline : @ticket.Deadline.ToString("dd/MM/yyyy HH:mm")</span> <br>
+                    }
+                </li>
+                <form asp-action="ResolveTicket" asp-controller="Ticket" method="post">
+                    <input type="hidden" name="Id" value="@ticket.Id" />
+                    <input type="submit" class="resolve-ticket-btn" value="Resolve Ticket">
+                </form>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>No tickets available.</p>
+    }
+</body>
+</html>

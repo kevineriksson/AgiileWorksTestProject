@@ -1,0 +1,55 @@
+﻿<Properties StartupConfiguration="{A060A07A-F00C-4A78-9E1B-0F7D284FC62E}|https">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../Documents/GitHub/AgiileWorksTestProject/CustomerService/CustomerService_Project/Controllers/HomeController.cs">
+    <Files>
+      <File FileName="wwwroot/css/site.css" />
+      <File FileName="Views/Ticket/Ticket.cshtml" />
+      <File FileName="Program.cs" Line="29" Column="49" />
+      <File FileName="Controllers/TicketController.cs" Line="11" Column="47" />
+      <File FileName="Controllers/HomeController.cs" Line="27" Column="1" />
+      <File FileName="Views/Shared/_Layout.cshtml" Line="24" Column="30" />
+      <File FileName="../Tests/Controllers/TicketControllerTests.cs" Line="13" Column="2" />
+      <File FileName="../Tests/Services/TicketServiceTests.cs" Line="8" Column="32" />
+      <File FileName="Services/TicketServices.cs" Line="18" Column="23" />
+      <File FileName="Interfaces/ITicketServices.cs" Line="14" Column="1" />
+      <File FileName="Models/Ticket.cs" Line="11" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CustomerService_Project" expanded="True">
+            <Node name="CustomerService_Project" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Tests">
+              <Node name="Services">
+                <Node name="TicketServiceTests.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="CustomerService_Project" expanded="True">
+            <Node name="Tests" expanded="True">
+              <Node name="CustomerService_Project.Tests.ServiceTests" expanded="True">
+                <Node name="TicketServiceTests" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.CustomerService__Project PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>
